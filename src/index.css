@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@200;400;700&display=swap');
+
+
+body{
+  font-family: 'inter', sans-serif;
+  background-color: rgb(243 244 246);
+}
+
+.slider::-webkit-scrollbar{
+  display: none;
+}
+.suggestedProducts::-webkit-scrollbar {
+  display: none;
+}
+
+.track{
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 60s linear infinite;
+}
+.track:hover {
+  animation-play-state: paused;
+}
+
+input[type="radio"].input-colorChoice + label {
+  padding: 0.3rem 0.5rem;
+  width: 25px;
+  height: 25px;
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  border-radius: 3px;
+}
+input[type="radio"].input-colorChoice:checked + label{
+  border: 2px solid #000;
+}
+input[type="radio"].input-colorChoice:checked + label::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  bottom: -10px;
+  background-color: #000;
+  left: 0;
+  position: absolute;
+}
+
+option:disabled{
+  text-decoration:line-through;
+}
+nav{
+  z-index: 1000;
+}
+#Mobile-CloseBtn{
+  z-index: 1100;
+}
+#modalBlur{
+  z-index: 1300;
+}
+#discountBtn , #discountBtn-small{
+  z-index: 1200;
+}
+#modalImgContainer, .socialMedia-link{
+  z-index: 1400;
+}
+
+.socialMedia-li:hover .socialMedia-link{
+  color : white
+}
